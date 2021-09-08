@@ -7,6 +7,10 @@ public class LabB5 {
 		
 		for(int i = 0; i < 10; i++) {
 			int score = parseInt(showInputDialog("Skriv inn en testscore fra 0-100:"));
+			if(score < 0 || score > 100) {
+				System.out.println("Invalid score. Try again.");
+				score = parseInt(showInputDialog("Skriv inn en testscore fra 0-100:"));
+			}
 			if(score >= 0 && score <= 39) {
 				System.out.println("F");
 			} else if (score >= 40 && score <= 49) {
@@ -19,9 +23,6 @@ public class LabB5 {
 				System.out.println("B");
 			} else if (score >= 90 && score <= 100) {
 				System.out.println("A");
-			} else {
-				System.out.println("Invalid score. Try again.");
-				score = parseInt(showInputDialog("Skriv inn en testscore fra 0-100:"));
 			}
 		}
 	}
