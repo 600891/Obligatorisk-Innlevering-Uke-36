@@ -7,9 +7,8 @@ public class LabB5 {
 		
 		for(int i = 0; i < 10; i++) {
 			int score = parseInt(showInputDialog("Skriv inn en testscore fra 0-100:"));
-			if(score < 0 || score > 100) {
-				System.out.println("Invalid score. Try again.");
-				score = parseInt(showInputDialog("Skriv inn en testscore fra 0-100:"));
+			while (score <=0) {
+				score = parseInt(showInputDialog("Ugyldig score. Skriv inn en testscore fra 0-100:"));
 			}
 			if(score >= 0 && score <= 39) {
 				System.out.println("F");
